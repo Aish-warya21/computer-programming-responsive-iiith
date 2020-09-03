@@ -222,12 +222,12 @@ window.view = {
 	 	if (this.currentSiblingElement.className === 'break redClass')
 			this.codeExecutionWithColourAndId('closeBrc1Id');
 		if (1 <= model.inputNumber && model.inputNumber <= 6) {
-	 		if (this.nextSiblingElement.id === 'holidayId')
+	 		if (this.nextSiblingElement.id === 'workingdayId')
 				this.codeExecutionWithColourAndId('elseIfId');
-	 		else if (this.nextSiblingElement.id === 'workingdayId') {
+	 		else if (this.nextSiblingElement.id === 'holidayId') {
 	 			this.codeExecutionWithColour();
-				this.changeOpacity('workingdayImage');
-				this.setInnerHtml('outputDayId', 'WORKING DAY');
+				this.changeOpacity('holidayImage');
+				this.setInnerHtml('outputDayId', 'HOLIDAY');
 	 		}
 	 	}
 		if ( model.inputNumber > 7 ) {
@@ -241,10 +241,10 @@ window.view = {
 	 		}
 	 	}
 	 	if (model.inputNumber === 7) {
-	 		if (this.nextSiblingElement.id === 'holidayId') {
+	 		if (this.nextSiblingElement.id === 'workingdayId') {
 				this.codeExecutionWithColour();
-				this.changeOpacity('holidayImage');
-				this.setInnerHtml('outputDayId', 'HOLIDAY');
+				this.changeOpacity('workingdayImage');
+				this.setInnerHtml('outputDayId', 'WORKINGDAY');
 	 		}
 	 	}
 		if (this.nextSiblingElement.id === 'ifId')
